@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'gulp-rails'
+GulpRails::CLI.start

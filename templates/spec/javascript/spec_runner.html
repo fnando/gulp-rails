@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Specs</title>
+  <link rel="stylesheet" href="../../node_modules/gulp-jasmine-phantom/vendor/jasmine-2.3/jasmine.css">
+  <script src="../../node_modules/es5-shim/es5-shim.js"></script>
+  <script src="../../node_modules/gulp-jasmine-phantom/vendor/jasmine-2.3/jasmine.js"></script>
+  <script src="../../node_modules/gulp-jasmine-phantom/vendor/jasmine-2.3/jasmine-html.js"></script>
+  <script src="../../node_modules/gulp-jasmine-phantom/vendor/jasmine-2.3/console.js"></script>
+  <script src="../../node_modules/gulp-jasmine-phantom/vendor/jasmine-2.3/boot.js"></script>
+  <script>
+    var consoleReporter = new jasmineRequire.ConsoleReporter()({
+      showColors: true,
+      timer: new jasmine.Timer,
+      print: function() {
+        console.log.apply(console, arguments)
+      }
+    });
+
+    if (navigator.userAgent.match(/phantomjs/i)) {
+      jasmine.getEnv().addReporter(consoleReporter);
+    }
+  </script>
+  <script src="/testem.js"></script>
+</head>
+<body>
+  <script src="../../tmp/specs.js"></script>
+</body>
+</html>
