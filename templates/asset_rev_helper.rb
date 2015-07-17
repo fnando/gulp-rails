@@ -1,4 +1,4 @@
-module ApplicationHelper
+module AssetRevHelper
   REV_MANIFEST_FILE = 'public/rev-manifest.json'.freeze
 
   def rev_manifest_file
