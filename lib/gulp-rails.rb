@@ -1,3 +1,4 @@
+require 'securerandom'
 require 'thor'
 require 'thor/group'
 
